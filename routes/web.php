@@ -29,7 +29,7 @@ Route::get('/dosen', function() {
     return view('universitas.dosen')->with('dosen', $arrDosen);
 });
 
-Route::get('/galeri', function(){
+Route::get('/gallery', function(){
     return view('universitas.galeri');
 });
 
