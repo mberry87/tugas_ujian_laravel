@@ -36,6 +36,11 @@ Route::get('/gallery', function(){
     return view('universitas.galeri');
 })->name('gambar');
 
+Route::get('informasi/{fakultas}/{jurusan}', function ($fakultas, $jurusan) {
+    $data = [$fakultas, $jurusan];
+    return view ('informasi')->with('data', $data);
+})->name('info');
+
 // Route::get('mahasiswa', function() {
 //     $nama = 'Tya Kirana Putri';
 //     $nilai = -10;
