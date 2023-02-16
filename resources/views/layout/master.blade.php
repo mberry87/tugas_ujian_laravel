@@ -20,7 +20,7 @@
                     <a href="/dosen" class="nav-link @yield('menuDosen')">Data Dosen</a>
                 </li>
                 <li class="navbar-item">
-                    <a href="/gallery" class="nav-link @yield('menuGallery')">Gallery</a>
+                    <a href="{{ route('gambar') }}" class="nav-link @yield('menuGallery')">Gallery</a>
                 </li>
             </ul>
         </div>

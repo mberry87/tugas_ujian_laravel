@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('admin', function(){
+    return view('admin');
+});
 
 // contoh routing
 Route::get('/mahasiswa', function() {
@@ -31,7 +34,7 @@ Route::get('/dosen', function() {
 
 Route::get('/gallery', function(){
     return view('universitas.galeri');
-});
+})->name('gambar');
 
 // Route::get('mahasiswa', function() {
 //     $nama = 'Tya Kirana Putri';
