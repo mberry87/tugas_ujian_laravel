@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 </head>
 
 <body>
@@ -22,6 +22,9 @@
                 <li class="navbar-item">
                     <a href="{{ route('gambar') }}" class="nav-link @yield('menuGallery')">Gallery</a>
                 </li>
+                <li class="navbar-item">
+                    <a href="{{ route('info', ['fakultas' => 'FST', 'jurusan' => 'SI']) }}" class="nav-link">Info</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,11 +37,12 @@
 
     <footer class="bg-dark py-4 text-white mt-4">
         <div class="container">
+            <a href="{{ url('informasi/FST/SI') }}">sistem informasi</a>
             Sistem Informasi Mahasiswa | $copy {{ date('Y') }} strawberry
         </div>
     </footer>
 
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="{{ asset('js/my-script.js') }}"></script>
 </body>
 
 </html>

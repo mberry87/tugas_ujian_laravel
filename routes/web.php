@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('admin', function(){
     return view('admin');
@@ -35,6 +35,11 @@ Route::get('/dosen', function() {
 Route::get('/gallery', function(){
     return view('universitas.galeri');
 })->name('gambar');
+
+Route::get('informasi/{fakultas}/{jurusan}', function ($fakultas, $jurusan) {
+    $data = [$fakultas, $jurusan];
+    return view ('informasi')->with('data', $data);
+})->name('info');
 
 // Route::get('mahasiswa', function() {
 //     $nama = 'Tya Kirana Putri';
